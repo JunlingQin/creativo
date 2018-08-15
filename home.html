@@ -46,7 +46,7 @@
 					</button>
 
 					<a class="navbar-brand" href="index.html">
-						<img style="width:200px; height: 100px;" src="images/logo.jpg">
+						<img style="width:200px; height: 90px;" src="images/logo.jpg">
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
@@ -112,7 +112,7 @@
 	<script type="text/javascript">
 		var html = '';
 		for (var i = 0; i < 15; i++) {
-			html += '<a class="chocolat-image" href="./images/HOME/home' + i + '.jpg">' +
+			html += '<a class="gallery-image" href="./images/HOME/home' + i + '.jpg">' +
 				'<img src="./images/HOME/home' + i + '.jpg" />' +
 				'</a>';
 		}
@@ -192,20 +192,26 @@
 	<link rel="stylesheet" href="css/justifiedGallery.min.css" type="text/css" />
 	<script type="text/javascript">
 		$(function () {
-			$("#site-gallery-wrapper").justifiedGallery();
+			$("#site-gallery-wrapper").justifiedGallery({
+				rowHeight: 200
+			});
 		});
 	</script>
 
-	<!-- js for portfolio  -->
-	<script src="js/jquery.chocolat.js "></script>
-	<link rel="stylesheet " href="css/chocolat.css " type="text/css" />
+	<script src="js/jquery.colorbox.js"></script>
+	<link rel="stylesheet " href="css/colorbox.css" type="text/css" />
 	<!--light-box-files -->
 	<script type="text/javascript">
-		$(function () {
-			$('#site-gallery-wrapper').Chocolat();
+		$(".gallery-image").colorbox({
+			rel: 'gallery-image',
+			maxWidth: '80%',
+			maxHeight: '80%',
+			opacity: 0.8,
+			transition: 'elastic',
+			current: '',
+			fixed: true
 		});
 	</script>
-	<!-- /js for portfolio  -->
 
 	<!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
