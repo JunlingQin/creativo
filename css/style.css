@@ -1067,6 +1067,12 @@ button.close {
 }
 
 @media (max-width: 736px) {
+  #cboxPrevious {
+    left: -30px !important;
+  }
+  #cboxNext {
+    right: -30px !important;
+  }
   .navbar-header {
     width: 100%;
     float: none;
