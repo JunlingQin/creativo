@@ -497,7 +497,7 @@ div#about {
 
 .ideapaint .ideapaint-more {
   display: block;
-  width: 40%;
+  width: 50%;
   height: 50px;
   padding: 10px;
   cursor: pointer;
@@ -556,7 +556,7 @@ div#about {
     margin-top: 10px;
   }
   .ideapaint .ideapaint-more {
-    width: 70%;
+    width: 90%;
   }
 }
 
@@ -609,12 +609,9 @@ div#about {
 
 .product_grid a {
   font-size: 14px;
-  color: #ffffff;
-  padding: 10px 20px;
-  background: #00b1cb;
+  padding: 10px;
   display: inline-block;
   border-radius: 3px;
-  border: 1px solid #00b1cb;
   transition: all 0.5s ease;
 }
 
@@ -640,7 +637,7 @@ div#about {
 
 .apply-site .intro-wrapper {
   position: absolute;
-  top: 12%;
+  top: 47%;
   right: 6%;
   width: 620px;
   padding: 10px;
@@ -794,9 +791,9 @@ iframe {
 
 .contact-right input[type="submit"] {
   padding: 0.6em 1em;
-  color: #00b5cb;
+  color: #fff;
   font-size: 1.1em;
-  background: #fff;
+  background: #00b5cb;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
@@ -808,12 +805,6 @@ iframe {
   border: 1px solid #00b5cb;
   letter-spacing: 2px;
   text-transform: uppercase;
-}
-
-.contact-right input[type="submit"]:hover {
-  background: #00b5cb;
-  color: #fff;
-  border: 1px solid #00b5cb;
 }
 
 .address-row {
