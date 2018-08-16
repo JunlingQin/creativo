@@ -981,6 +981,10 @@ button.close {
   .nav-links .navbar-nav>li>a {
     padding: 0px 8px;
   }
+  .home-page-video-wrapper .video-wrapper {
+    margin-top: 0;
+    height: 450px;
+  }
   .banner h3 {
     color: #fff;
     text-transform: uppercase;
@@ -1165,6 +1169,10 @@ button.close {
   }
   .banner .fill {
     height: 320px;
+  }
+  .home-page-video-wrapper .video-wrapper {
+    margin-top: 0;
+    height: 260px;
   }
 }
 
