@@ -47,7 +47,7 @@
 						</button>
 
 						<a class="navbar-brand" href="index.html">
-							<img style="width:200px; height: 90px;" src="images/logo.jpg">
+							<img src="images/logo.jpg">
 						</a>
 					</div>
 					<div class="row collapse navbar-collapse" id="myNavbar">
@@ -186,19 +186,33 @@
 				</script>
 			</div>
 			<div class="col-xs-12">
-				<form action="#" method="post">
+				<form id="contactForm" method="post">
 					<div class="col-sm-6 contact-left">
-						<input type="text" name="Name" placeholder="请输入您的姓名" required="">
-						<input type="email" name="Email" placeholder="请输入您的Email" required="">
-						<input type="text" name="Mobile Number" placeholder="请输入您的手机号码" required="">
+						<input type="text" name="fullname" placeholder="请输入您的姓名" required="">
+						<input type="email" name="email" placeholder="请输入您的Email" required="">
+						<input type="text" name="mobile" placeholder="请输入您的手机号码" required="">
 					</div>
 					<div class="col-sm-6 contact-right">
-						<textarea name="Message" placeholder="留言" required=""></textarea>
-						<input type="submit" value="提交">
+						<textarea name="content" placeholder="留言" required=""></textarea>
+						<input id="submit" name="提交" type="submit" value="提交">
 					</div>
 					<div class="clearfix"></div>
 				</form>
 			</div>
+			<script type="text/javascript">
+				$(function () {
+					var url = "http://www.creativo-ltd.com.cn/?c=post&f=setok&id=$id&module_id=23"
+					$("#submit").click(function (event) {
+						var event = event || window.event;
+						event.preventDefault();
+						$.post(url, $("#contactForm").serialize(), function () {
+							$("#contactForm")[0].reset();
+							console.log("ok");
+							alert("发送成功。");
+						});
+					});
+				})
+			</script>
 
 		</div>
 	</div>
@@ -207,34 +221,36 @@
 	<!-- contact -->
 	<div class="contact footer-wrapper">
 		<div class="container">
-			<div class="col-md-4 footer-pro-list">
-				<div class="contact-list">
-					<div class="list-title">产品展示</div>
-					<ul>
-						<li>
-							<a href="ideapaint.html">IdeaPaint</a>
-						</li>
-						<li>
-							<a href="ideaPlay.html">IdeaPlay</a>
-						</li>
-					</ul>
+			<div class="col-md-8">
+				<div class="col-md-3 footer-pro-list">
+					<div class="contact-list">
+						<div class="list-title">产品展示</div>
+						<ul>
+							<li>
+								<a href="ideapaint.html">IdeaPaint</a>
+							</li>
+							<li>
+								<a href="ideaPlay.html">IdeaPlay</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<div class="col-md-4 footer-cont-list">
-				<div class="contact-list">
-					<div class="list-title">联系我们</div>
-					<ul>
-						<li>
-							<a href="contact.html">联系我们</a>
-						</li>
-					</ul>
+				<div class="col-md-3 footer-cont-list">
+					<div class="contact-list">
+						<div class="list-title">联系我们</div>
+						<ul>
+							<li>
+								<a href="contact.html">联系我们</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="contact-list">
 					<div class="list-title">深圳市艾迪亚装饰材料有限公司</div>
 					<ul>
-						<li>电话/传真：+86 0755 86566796</li>
+						<li>电话/传真：+86 0755-86566796</li>
 						<li>邮箱：
 							<a href="mailto:infocn@creativo-ltd.com">infocn@creativo-ltd.com</a>
 						</li>

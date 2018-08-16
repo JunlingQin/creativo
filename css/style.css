@@ -37,7 +37,7 @@ body a:hover {
 }
 
 body.body-wrapper {
-  padding-top: 100px;
+  padding-top: 85px;
 }
 
 input[type="submit"],
@@ -76,7 +76,7 @@ a {
 
 .footer-wrapper {
   background: url(../images/footerBG.png) no-repeat;
-  background-size: cover;
+  background-size: auto !important;
 }
 
 .footer-wrapper.contact {
@@ -84,7 +84,7 @@ a {
   margin-top: 40px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .footer-wrapper .footer-pro-list,
   .footer-wrapper .footer-cont-list {
     display: none;
@@ -132,13 +132,14 @@ a {
 
 .nav-links .navbar-brand>img {
   float: left;
-  height: 90px;
-  width: 200px;
+  height: 83px;
+  width: 254px;
 }
 
 .nav-links .navbar-nav>li>a {
-  height: 100px;
-  padding: 40px 25px;
+  height: 83px;
+  line-height: 83px;
+  padding: 0px 25px;
   color: #171717;
   font-size: 16px;
   font-weight: 400;
@@ -183,6 +184,8 @@ a {
   }
   .nav-links .navbar-nav>li>a {
     height: auto;
+    line-height: normal;
+    padding: 15px 0px;
   }
 }
 
@@ -423,7 +426,7 @@ div#about {
   color: #00b1cb;
   text-decoration: none;
   padding: 0;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-align: left;
 }
 
@@ -442,6 +445,7 @@ div#about {
   line-height: 1.25em;
   display: block;
   padding: 0 0 0.75em;
+  margin-bottom: 1px;
 }
 
 .nav-list-wrapper .nav-list a:hover,
@@ -589,9 +593,15 @@ div#about {
   margin: 0 auto;
 }
 
+.product_grid .hovereffect .pro-img:hover {
+  transition: all 0.3s;
+  transform: scale(1.05);
+}
+
 .product_grid h4 {
-  height: 1.2em;
-  font-size: 1.2em;
+  height: 25px;
+  font-size: 20px;
+  font-weight: bold;
   color: #282828;
   margin: 0.5em 0;
   text-transform: capitalize;
@@ -637,7 +647,7 @@ div#about {
 
 .apply-site .intro-wrapper {
   position: absolute;
-  top: 47%;
+  top: 58%;
   right: 6%;
   width: 620px;
   padding: 10px;
@@ -807,6 +817,11 @@ iframe {
   text-transform: uppercase;
 }
 
+.contact-right input[type="submit"]:hover {
+  color: #00b1cb;
+  background: #fff;
+}
+
 .address-row {
   margin: 0 0 1em;
 }
@@ -944,7 +959,7 @@ button.close {
 
 @media (max-width: 1280px) {
   .nav-links .navbar-nav>li>a {
-    padding: 40px 20px;
+    padding: 0px 20px;
   }
   .product_grid .pro-img {
     max-width: 400px;
@@ -957,7 +972,7 @@ button.close {
 
 @media (max-width: 991px) {
   .nav-links .navbar-nav>li>a {
-    padding: 40px 8px;
+    padding: 0px 8px;
   }
   .banner h3 {
     color: #fff;
@@ -1020,7 +1035,7 @@ button.close {
     background: #fff;
   }
   .nav-links .navbar-nav>li>a {
-    padding: 20px 20px;
+    padding: 15px 0px;
   }
   .nav-links .navbar-nav>li:nth-child(3)>a {
     pointer-events: none;
@@ -1061,6 +1076,7 @@ button.close {
     width: 100%;
     float: none;
     border: none;
+    margin: 0;
   }
   .navbar-nav {
     float: none;
@@ -1120,14 +1136,14 @@ button.close {
     font-size: 2em;
   }
   .product_grid h4 {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }
 
 @media (max-width: 640px) {
   .product_grid {
     text-align: center;
-    width: 50%;
+    width: 100%;
     float: left;
     margin-bottom: 2em;
   }
