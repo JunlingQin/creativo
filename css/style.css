@@ -70,7 +70,15 @@ a {
   font-size: 20px;
 }
 
-/*-- header --*/
+.video-wrapper {
+  height: 400px;
+  margin-top: 20px;
+}
+
+.home-page-video-wrapper .video-wrapper {
+  height: 660px;
+  margin-top: 20px;
+}
 
 /* footer */
 
@@ -494,11 +502,6 @@ div#about {
   margin-left: 20px;
 }
 
-.ideapaint .tab-content .video-wrapper {
-  height: 400px;
-  margin-top: 20px;
-}
-
 .ideapaint .ideapaint-more {
   display: block;
   width: 50%;
@@ -555,9 +558,13 @@ div#about {
     width: 100%;
     margin: 0px;
   }
-  .ideapaint .tab-content .video-wrapper {
+  .video-wrapper {
     height: 200px;
     margin-top: 10px;
+  }
+  .home-page-video-wrapper .video-wrapper {
+    margin: 0;
+    height: 400px;
   }
   .ideapaint .ideapaint-more {
     width: 90%;
