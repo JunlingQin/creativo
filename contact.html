@@ -210,15 +210,25 @@
 			</div>
 			<script type="text/javascript">
 				$(function () {
-					var url = "http://www.creativo-ltd.com.cn/?c=post&f=setok&id=$id&module_id=23"
+					var url = "http://www.creativo-ltd.com.cn/contact.php"
 					$("#submit").click(function (event) {
 						var event = event || window.event;
 						event.preventDefault();
-						$.post(url, $("#contactForm").serialize(), function () {
-							$("#contactForm")[0].reset();
-							console.log("ok");
-							alert("发送成功。");
-						});
+						var text = $("#contactForm").find('[name="fullname"]').val();
+						var email = $("#contactForm").find('[name="email"]').val();
+						var mobile = $("#contactForm").find('[name="mobile"]').val();
+						var content = $("#contactForm").find('[name="content"]').val();
+						if (text && email && mobile && content) {
+							$.post(url, $("#contactForm").serialize(), function () {
+								$("#contactForm")[0].reset();
+								console.log("ok");
+								alert("发送成功。");
+							});
+						} else {
+							alert("请完善联系信息。");
+						}
+
+
 					});
 				})
 			</script>
