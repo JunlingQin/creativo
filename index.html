@@ -261,7 +261,8 @@
 
 	<div class="container home-page-video-wrapper">
 		<div class="row video-wrapper">
-			<video style="height: 100%; width: 100%" preload="none" poster="images/videoposter.png" src="images/indexpage.mp4" controls="controls">
+			<video id="player" style="height: 100%; width: 100%" preload="none" poster="images/videoposter.png" src="images/indexpage.mp4"
+			    controls="controls">
 				您的浏览器不支持 video 标签。
 			</video>
 		</div>
@@ -359,6 +360,27 @@
 		});
 	</script>
 	<!-- //here ends scrolling icon -->
+	<!-- 视频 -->
+	<link rel="stylesheet" href="css/mediaelementplayer.css">
+	<script src="js/mediaelement-and-player.min.js"></script>
+	<script src="js/shims/lang/zh-cn.js"></script>
+	<script>
+		$(function () {
+			mejs.i18n.language("zh-CN");
+			// You can use either a string for the player ID (i.e., `player`), 
+			// or `document.querySelector()` for any selector
+			var player = new MediaElementPlayer('player', {
+				// When using `MediaElementPlayer`, an `instance` argument
+				// is available in the `success` callback
+				pluginPath: './js/shims/',
+				success: function (mediaElement, originalNode, instance) {
+					// do things
+				}
+			});
+		})
+	</script>
+	<!-- //视频  -->
+
 </body>
 
 </html>
