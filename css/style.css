@@ -71,12 +71,10 @@ a {
 }
 
 .video-wrapper {
-  height: 400px;
   margin-top: 20px;
 }
 
 .home-page-video-wrapper .video-wrapper {
-  height: 660px;
   margin-top: 20px;
 }
 
@@ -559,12 +557,10 @@ div#about {
     margin: 0px;
   }
   .video-wrapper {
-    height: 200px;
     margin-top: 10px;
   }
   .home-page-video-wrapper .video-wrapper {
     margin-top: 0;
-    height: 400px;
   }
   .ideapaint .ideapaint-more {
     width: 90%;
@@ -983,7 +979,6 @@ button.close {
   }
   .home-page-video-wrapper .video-wrapper {
     margin-top: 0;
-    height: 450px;
   }
   .banner h3 {
     color: #fff;
@@ -1172,7 +1167,6 @@ button.close {
   }
   .home-page-video-wrapper .video-wrapper {
     margin-top: 0;
-    height: 260px;
   }
 }
 
