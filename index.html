@@ -3,7 +3,7 @@
 
 <head>
 	<link rel="shortcut icon" href="./images/favicon.ico" />
-	<meta name="keywords" content="深圳市艾迪亚装饰材料有限公司,书写墙,涂鸦墙">
+	<meta name="keywords" content="深圳市艾迪亚装饰材料有限公司,Creativo,书写墙,涂鸦墙">
 	<title> Creativo </title>
 	<meta name="description" content="深圳市艾迪亚装饰材料有限公司是一家专注提供特殊艺术涂料的公司，作为IdeaPaint中国独家总代理，提供专业的装饰工程施工咨询、艺术品定制，艺术材料推荐，以及完善的售后服务。帮助用户更方便的使用产品。">
 	<!-- for-mobile-apps -->
@@ -163,20 +163,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/swiper.min.js"></script>
-	<script type="text/javascript">
-		$(function () {
-			var mySwiper = new Swiper('.swiper-container', {
-				loop: true,
-				effect: 'fade',
-				fade: {
-					crossFade: false
-				},
-				autoplay: 5000,
-				autoplayDisableOnInteraction: false
-			});
-		})
-	</script>
 	<!-- //banner -->
 
 	<!-- product -->
@@ -222,7 +208,7 @@
 	<!-- 公司 -->
 	<div class="container apply-site company">
 		<div class="container">
-			<div class="intro-wrapper">
+			<div class="intro-wrapper wow rotateInDownLeft" data-wow-offset="20" data-wow-duration="2s">
 				<h3 class="title">办 公</h3>
 				<p class="intro-text">Transform any flat surface into collaborative work tools.</p>
 				<p class="intro-text">将任何平面变成协同工作的工具</p>
@@ -235,7 +221,7 @@
 	<!-- 学校 -->
 	<div class="container apply-site school">
 		<div class="container">
-			<div class="intro-wrapper">
+			<div class="intro-wrapper wow zoomInDown" data-wow-offset="20" data-wow-duration="2s">
 				<h3 class="title">学 校</h3>
 				<p class="intro-text">Inspire and encourage everyone to connect and accelerate learning.</p>
 				<p class="intro-text">透过擦写表达，启发和鼓励人与人之间的互动和学习</p>
@@ -248,7 +234,7 @@
 	<!-- 家居 -->
 	<div class="container apply-site home">
 		<div class="container">
-			<div class="intro-wrapper">
+			<div class="intro-wrapper wow fadeInDown" data-wow-offset="20" data-wow-duration="2s">
 				<h3 class="title">家 居</h3>
 				<p class="intro-text">Turn any wall into dry erasable high performing idea platform.</p>
 				<p class="intro-text">将任何墙面变成能写能擦的高效创意平台</p>
@@ -262,7 +248,7 @@
 	<div class="container home-page-video-wrapper">
 		<div class="row video-wrapper">
 			<video id="player" style="height: 100%; width: 100%" preload="none" poster="images/videoposter.png" src="images/indexpage.mp4"
-			    controls="controls">
+			 controls="controls">
 				您的浏览器不支持 video 标签。
 			</video>
 		</div>
@@ -341,6 +327,22 @@
 	<!-- for bootstrap working -->
 	<script src="js/bootstrap.js"></script>
 	<!-- //for bootstrap working -->
+	<!-- 轮播图  -->
+	<script src="js/swiper.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			var mySwiper = new Swiper('.swiper-container', {
+				loop: true,
+				effect: 'fade',
+				fade: {
+					crossFade: false
+				},
+				autoplay: 5000,
+				autoplayDisableOnInteraction: false
+			});
+		})
+	</script>
+	<!-- //轮播图  -->
 	<!-- here stars scrolling icon -->
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -380,6 +382,13 @@
 		})
 	</script>
 	<!-- //视频  -->
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="js/wow.min.js"></script>
+	<script>
+		$(function () {
+			new WOW().init();
+		})
+	</script>
 
 </body>
 
