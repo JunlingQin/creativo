@@ -248,7 +248,7 @@
 	<div class="container home-page-video-wrapper">
 		<div class="row video-wrapper">
 			<video id="player" style="height: 100%; width: 100%" preload="none" poster="images/videoposter.png" src="images/indexpage.mp4"
-			 controls="controls">
+			    controls="controls">
 				您的浏览器不支持 video 标签。
 			</video>
 		</div>
@@ -386,7 +386,10 @@
 	<script src="js/wow.min.js"></script>
 	<script>
 		$(function () {
-			new WOW().init();
+			if (document.documentElement.clientWidth > 768) {
+				new WOW().init();
+			}
+
 		})
 	</script>
 
