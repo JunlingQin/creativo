@@ -569,6 +569,26 @@ div#about {
 
 /* --//ideapaint-- */
 
+/* ideaPlay */
+.ideaPlay-category-title {
+  height: auto;
+}
+.modern-choice-item-pic {
+  padding-top:100%;
+  height: 0;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ideaPlay-detail {
+  height: 50px;
+  color: #0E4B85;
+  background: #eee;
+  line-height: 50px;
+}
+/* --// ideaPlay-- */
+
 /*-- product --*/
 
 .product {
