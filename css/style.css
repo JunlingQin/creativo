@@ -1063,7 +1063,8 @@ button.close {
   .nav-links .navbar-nav>li>a {
     padding: 15px 0px;
   }
-  .nav-links .navbar-nav>li:nth-child(3)>a {
+  .nav-links .navbar-nav>li:nth-child(3) > a,
+  .nav-links .navbar-nav>li:last-child > a {
     pointer-events: none;
   }
   .navbar-brand {
