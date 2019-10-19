@@ -139,7 +139,7 @@ a {
 .nav-links .navbar-brand>img {
   float: left;
   height: 83px;
-  width: 254px;
+  width: auto;
 }
 
 .nav-links .navbar-nav>li>a {
@@ -278,7 +278,7 @@ div#myNavbar {
   -moz-background-size: cover;
   -o-background-size: cover;
   -ms-background-size: cover;
-  height: 640px;
+  height: 420px;
   position: relative;
   text-align: center;
   padding: 0;
@@ -301,7 +301,7 @@ div#myNavbar {
 
 .banner .fill {
   width: 100%;
-  height: 640px;
+  height: 420px;
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -731,7 +731,7 @@ div#about {
 }
 
 .apply-site.school {
-  background-image: url(../images/school_bg.png);
+  background-image: url(../images/school_bg.jpg);
 }
 
 .apply-site.home {
