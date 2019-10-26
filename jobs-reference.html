@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="shortcut icon" href="./images/favicon.ico" />
+	<meta name="keywords" content="深圳市艾迪亚装饰材料有限公司,书写墙,涂鸦墙">
+	<title>工程案例-Creativo</title>
+	<meta name="description" content="深圳市艾迪亚装饰材料有限公司是一家专注提供特殊艺术涂料的公司，作为IdeaPaint中国独家总代理，提供专业的装饰工程施工咨询、艺术品定制，艺术材料推荐，以及完善的售后服务。帮助用户更方便的使用产品。">
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //for-mobile-apps -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/swiper.min.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/template-web.js"></script>
+	<!-- //js -->
+	<!-- font-awesome icons -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<!-- <link href="//fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet"> -->
+	<!-- <link href="//fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet"> -->
+</head>
+<script type="text/javascript">
+	var imagesJson = {
+		0: {
+			imgId: 0,
+			title: "马鞍山武藏面屋",
+			categories: "餐厅项目",
+			list: new Array(4)
+		},
+		1: {
+			imgId: 1,
+			title: "香港浅水湾",
+			categories: "住宅项目",
+			list: new Array(4)
+		},
+		2: {
+			imgId: 2,
+			title: "PDM a JLL company 办公室",
+			categories: "办公室",
+			list: new Array(4)
+		},
+		3: {
+			imgId: 3,
+			title: "宝玑",
+			categories: "零售店",
+			list: new Array(3)
+		},
+		4: {
+			imgId: 4,
+			title: "广州周大福K11商场",
+			categories: " ",
+			list: new Array(13)
+		},
+		5: {
+			imgId: 5,
+			title: "香港沙田新城市广场一期MCM",
+			categories: "零售店",
+			list: new Array(4)
+		},
+
+		6: {
+			imgId: 6,
+			title: "凡赛斯",
+			categories: "零售店",
+			list: new Array(5)
+		},
+		7: {
+			imgId: 7,
+			title: "长沙顺天国际金融中心(长沙IFC)",
+			categories: " ",
+			list: new Array(5)
+		},
+		8: {
+			imgId: 8,
+			title: "伯爵专卖店",
+			categories: "精品店",
+			list: new Array(4)
+		}
+	};
+</script>
+<body class="body-wrapper">
+	<div id="headerTpl"></div>
+	<!-- header -->
+	<!-- banner -->
+	<!-- navigation -->
+	<div class="nav-links"></div>
+	<script type="text/javascript">
+		$(function(){
+			$("#headerTpl").load("header.html", function(e){
+				var navHtml = template('tpl-head', {currentPage : "jobs-reference"});
+				$(".nav-links").html(navHtml);
+			});
+		});
+	</script>
+	<!-- /navigation -->
+
+	<!-- //header -->
+
+	<!-- about -->
+	<div class="apply-site-page">
+		<div class="container">
+			<div class="title">
+				<h3>工程案例</h3>
+				<div class="sub-title">活艺术的作品</div>
+			</div>
+		</div>
+	</div>
+	<!-- //about -->
+	<div class="partners jobs-reference-list">
+		<div class="container">
+			<div>
+				<div id="site-gallery-wrapper" class="gallery-grids row"></div>
+			</div>
+		</div>
+	</div>
+	<script id="tpl-jobs-reference-item" type="text/html">
+		{{each imageList imageInfo}}
+			<div data-imageId={{imageInfo.imgId}} class="jobs-reference-item col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<div class="jobs-reference-image"  style="background-image: url('./images/jobReference/{{imageInfo.imgId}}.jpg')"></div>
+				<div class="jobs-reference-info">{{imageInfo.title}}</div>
+			</div>
+		{{/each}}
+	</script>
+	<script type="text/javascript">
+		var showNumber = 9;
+		var pictureNumberList = [];
+		for(var i = 0; i < showNumber; i++){
+			pictureNumberList.push(imagesJson[i]);
+		}
+		$("#site-gallery-wrapper").html(template("tpl-jobs-reference-item", {
+			imageList: pictureNumberList
+		}));
+	</script>
+	<style>
+		#site-gallery-wrapper .jobs-reference-item {
+			height: 290px;
+			margin-bottom: 30px;
+			position: relative;
+			padding: 10px;
+			opacity: 0.8;
+			cursor: pointer;
+		}
+		#site-gallery-wrapper .jobs-reference-image {
+			height: 100%;
+			width: 100%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		#site-gallery-wrapper .jobs-reference-info {
+			text-align: center;
+		}
+		#site-gallery-wrapper .jobs-reference-item:hover {
+			opacity: 1;
+			transition: all 0.3s;
+			transform: scale(1.05);
+		}
+		#site-gallery-wrapper .jobs-reference-item:hover .jobs-reference-info {
+			color: #333;
+		}
+	</style>
+
+	<div class="jobs-refer-detail" style="display: none;">
+		<div class="container">
+			<div class="back-control-box col-xs-6 col-sm-4 col-md-2 col-lg-2 col-lg-offset-10">
+				<span>返回</span>
+			</div>
+		</div>
+		<div class="gallery-detail-container container"></div>
+	</div>
+	<script id="tpl-jobs-reference-detail" type="text/html">
+		<div class="page-header-box col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h1>{{title}}</h1>
+			<div class="sub-title">工程信息</div>
+		</div>
+		<div id="single-news-content-wrap" class="clearfix">
+			<div class="news-profile-box col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<h2 class="news-title">{{title}}</h2>
+				<div class="post-type">{{categories}}</div>
+				<div class="news-description"></div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+					<!-- Swiper -->
+				<div class="swiper-container gallery-top">
+					<div class="swiper-wrapper">
+						{{each list Val key}}
+							<div class="swiper-slide" style="background-image:url(./images/jobReference/{{imgId}}/{{key}}.jpg)"></div>
+						{{/each}}
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next swiper-button-white"></div>
+					<div class="swiper-button-prev swiper-button-white"></div>
+				</div>
+				<div class="swiper-container gallery-thumbs">
+					<div class="swiper-wrapper">
+						{{each list Val key}}
+							<div class="swiper-slide" style="background-image:url(./images/jobReference/{{imgId}}/{{key}}.jpg)"></div>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script src="js/swiper.min.js"></script>
+	<script type="text/javascript">
+		var pictureNumberList = new Array(9);
+		$(function(){
+			$("#site-gallery-wrapper").on("click", ".jobs-reference-item", function(){
+				var imgId = $(this).attr("data-imageId");
+				if (imagesJson[imgId]) {
+					$(".apply-site-page").hide();
+					$(".jobs-reference-list").hide();
+					$(".jobs-refer-detail").show();
+					$(".jobs-refer-detail .gallery-detail-container").html(template("tpl-jobs-reference-detail", imagesJson[imgId]));
+					var galleryThumbs = new Swiper('.gallery-thumbs', {
+						spaceBetween: 10,
+						slidesPerView: 4,
+						loop: true,
+						freeMode: true,
+						loopedSlides: 3, //looped slides should be the same
+						watchSlidesVisibility: true,
+						watchSlidesProgress: true,
+					});
+					var galleryTop = new Swiper('.gallery-top', {
+						spaceBetween: 10,
+						loop:true,
+						loopedSlides: 3, //looped slides should be the same
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						},
+						thumbs: {
+							swiper: galleryThumbs,
+						},
+					});
+				}
+			});
+			$(".back-control-box").on("click", function(){
+				$(".apply-site-page").show();
+				$(".jobs-reference-list").show();
+				$(".jobs-refer-detail").hide();
+			});
+		})
+	
+	</script>
+  	<!-- Initialize Swiper -->
+	 <style>
+		 .back-control-box span {
+			display: block;
+			margin-bottom: 10px;
+			color: #fff;
+			text-align: center;
+			font-size: 12px;
+			line-height: 30px;
+			text-decoration: none;
+			background-color: #7ea7b5;
+			cursor: pointer;
+		}
+		.page-header-box h1{
+			font-size: 30px;
+			text-transform: uppercase;
+			color: #7ea7b5;
+		}
+		.page-header-box > .sub-title {
+			font-size: 12px;
+			line-height: 20px;
+			color: #bbbebf;
+		}
+		.news-title {
+			font-size: 20px;
+			padding: 0;
+			margin: 0;
+			border-bottom: #ccc solid 1px;
+			padding-bottom: 10px;
+			margin: 20px 0 10px;
+			line-height: 25px;
+		}
+		.swiper-container {
+			width: 100%;
+			height: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.swiper-slide {
+			background-size: cover;
+			background-position: center;
+		}
+		.gallery-top {
+			width: 100%;
+		}
+		.gallery-thumbs {
+			height: 100px;
+			box-sizing: border-box;
+			padding: 10px 0;
+		}
+		.gallery-thumbs .swiper-slide {
+			height: 100%;
+			opacity: 0.4;
+		}
+		.gallery-thumbs .swiper-slide-thumb-active {
+			opacity: 1;
+		}
+	</style>
+
+	<!-- contact -->
+	<div class="contact footer-wrapper">
+		<div class="container">
+			<div class="col-md-7">
+				<div class="col-md-3 footer-pro-list">
+					<div class="contact-list">
+						<div class="list-title">产品展示</div>
+						<ul>
+							<li>
+								<a href="ideapaint.html">IdeaPaint</a>
+							</li>
+							<li>
+								<a href="ideaPlay.html">IdeaPlay</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 footer-cont-list">
+					<div class="contact-list">
+						<div class="list-title">联系我们</div>
+						<ul>
+							<li>
+								<a href="contact.html">联系我们</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="contact-list">
+					<div class="list-title">深圳市艾迪亚装饰材料有限公司</div>
+					<ul>
+						<li>电话/传真：+86 0755-86566796</li>
+						<li>邮箱：
+							<a href="mailto:infocn@creativo-ltd.com">infocn@creativo-ltd.com</a>
+						</li>
+						<li>网站：
+							<a href="http://www.creativo-ltd.com.cn" target="_blank">www.creativo-ltd.com.cn</a>
+						</li>
+						<li>地址：深圳市南山区科发路19号华润置地大厦D座5楼</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- contact -->
+	<div class="copyright">
+		<div class="container">
+			<p>Copyright© 2018 深圳市艾迪亚装饰材料有限公司 版权所有
+				<a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备18085838号-1</a>
+			</p>
+		</div>
+	</div>
+
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<script src="js/jquery.colorbox.js"></script>
+	<link rel="stylesheet " href="css/colorbox.css" type="text/css" />
+	<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+</body>
+
+</html>

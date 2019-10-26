@@ -23,6 +23,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- js -->
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/template-web.js"></script>
 	<!-- //js -->
 	<!-- font-awesome icons -->
 	<link href="css/font-awesome.css" rel="stylesheet">
@@ -32,76 +33,19 @@
 </head>
 
 <body class="body-wrapper">
+	<div id="headerTpl"></div>
 	<!-- header -->
 	<!-- banner -->
 	<!-- navigation -->
-	<div class="nav-links">
-		<nav class="navbar navbar-inverse">
-			<div class="container">
-				<div class="row">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-
-						<a class="navbar-brand" href="/">
-							<img src="images/logo.jpg">
-						</a>
-					</div>
-					<div class="row collapse navbar-collapse" id="myNavbar">
-						<ul class="nav navbar-nav link-effect">
-							<li>
-								<a href="/">首页</a>
-							</li>
-							<li>
-								<a href="about-us.html">关于我们</a>
-							</li>
-							<li class="active">
-								<a href="ideapaint.html" class="dropdown-toggle">产品展示
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a href="ideapaint.html">IdeaPaint</a>
-									</li>
-									<li>
-										<a href="ideaPlay.html">IdeaPlay</a>
-									</li>
-									<li>
-										<a target="blank" href="http://www.creativo-ltd.com/?lang=zh-hans">艺术涂料</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="company.html">办公</a>
-							</li>
-							<li>
-								<a href="school.html">学校</a>
-							</li>
-							<li>
-								<a href="gallery.html">图册</a>
-							</li>
-							<li>
-								<a href="contact.html" class="dropdown-toggle">联系我们
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a href="contact.html">加盟代理</a>
-									</li>
-									<li>
-										<a target="_blank" href="https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-19839553535.62.22ac7941lqQNLH&id=577028321551">在线销售</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
+	<div class="nav-links"></div>
+	<script type="text/javascript">
+		$(function(){
+			$("#headerTpl").load("header.html", function(e){
+				var navHtml = template('tpl-head', {currentPage : "product"});
+				$(".nav-links").html(navHtml);
+			});
+		});
+	</script>
 	<!-- /navigation -->
 
 	<!-- //header -->

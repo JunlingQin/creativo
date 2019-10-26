@@ -4,7 +4,7 @@
 <head>
 	<link rel="shortcut icon" href="./images/favicon.ico" />
 	<meta name="keywords" content="深圳市艾迪亚装饰材料有限公司,书写墙,涂鸦墙">
-	<title>学校-案例展示-Creativo</title>
+	<title>艺术涂料-Creativo</title>
 	<meta name="description" content="深圳市艾迪亚装饰材料有限公司是一家专注提供特殊艺术涂料的公司，作为IdeaPaint中国独家总代理，提供专业的装饰工程施工咨询、艺术品定制，艺术材料推荐，以及完善的售后服务。帮助用户更方便的使用产品。">
 	<!-- for-mobile-apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +23,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- js -->
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/template-web.js"></script>
 	<!-- //js -->
 	<!-- font-awesome icons -->
 	<link href="css/font-awesome.css" rel="stylesheet">
@@ -32,86 +33,29 @@
 </head>
 
 <body class="body-wrapper">
+	<div id="headerTpl"></div>
 	<!-- header -->
 	<!-- banner -->
 	<!-- navigation -->
-	<div class="nav-links">
-		<nav class="navbar navbar-inverse">
-			<div class="container">
-				<div class="row">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-
-						<a class="navbar-brand" href="/">
-							<img src="images/logo.jpg">
-						</a>
-					</div>
-					<div class="row collapse navbar-collapse" id="myNavbar">
-						<ul class="nav navbar-nav link-effect">
-							<li>
-								<a href="/">首页</a>
-							</li>
-							<li>
-								<a href="about-us.html">关于我们</a>
-							</li>
-							<li>
-								<a href="ideapaint.html" class="dropdown-toggle">产品展示
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a href="ideapaint.html">IdeaPaint</a>
-									</li>
-									<li>
-										<a href="ideaPlay.html">IdeaPlay</a>
-									</li>
-									<li>
-										<a target="blank" href="http://www.creativo-ltd.com/?lang=zh-hans">艺术涂料</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="company.html">办公</a>
-							</li>
-							<li class="active">
-								<a href="school.html">学校</a>
-							</li>
-							<li>
-								<a href="gallery.html">图册</a>
-							</li>
-							<li>
-								<a href="contact.html" class="dropdown-toggle">联系我们
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a href="contact.html">加盟代理</a>
-									</li>
-									<li>
-										<a target="_blank" href="https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-19839553535.62.22ac7941lqQNLH&id=577028321551">在线销售</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
+	<div class="nav-links"></div>
+	<script type="text/javascript">
+		$(function(){
+			$("#headerTpl").load("header.html", function(e){
+				var navHtml = template('tpl-head', {currentPage : "company"});
+				$(".nav-links").html(navHtml);
+			});
+		});
+	</script>
 	<!-- /navigation -->
 
 	<!-- //header -->
 
 	<!-- about -->
-	<div class="apply-site-page">
+	<div class="company apply-site-page">
 		<div class="container">
 			<div class="title">
-				<h3>SCHOOL</h3>
-				<div class="sub-title">学校</div>
+				<h3>WORK</h3>
+				<div class="sub-title">办公</div>
 			</div>
 		</div>
 	</div>
@@ -127,8 +71,8 @@
 	<script type="text/javascript">
 		var html = '';
 		for (var i = 0; i < 10; i++) {
-			html += '<a class="gallery-image" href="./images/SCHOOL/sch' + i + '.jpg">' +
-				'<img src="./images/SCHOOL/sch' + i + '.jpg" />' +
+			html += '<a class="gallery-image" href="./images/company/comp' + i + '.jpg">' +
+				'<img src="./images/company/comp' + i + '.jpg" />' +
 				'</a>';
 		}
 		$("#site-gallery-wrapper").html(html)
@@ -200,32 +144,6 @@
 					scrollTop: $(this.hash).offset().top
 				}, 1000);
 			});
-		});
-	</script>
-	<!-- start-smoth-scrolling -->
-
-	<script src="js/jquery.justifiedGallery.min.js"></script>
-	<link rel="stylesheet" href="css/justifiedGallery.min.css" type="text/css" />
-	<script type="text/javascript">
-		$(function () {
-			$("#site-gallery-wrapper").justifiedGallery({
-				rowHeight: 300
-			});
-		});
-	</script>
-
-	<script src="js/jquery.colorbox.js"></script>
-	<link rel="stylesheet " href="css/colorbox.css" type="text/css" />
-	<!--light-box-files -->
-	<script type="text/javascript">
-		$(".gallery-image").colorbox({
-			rel: 'gallery-image',
-			maxWidth: '80%',
-			maxHeight: '80%',
-			opacity: 0.8,
-			transition: 'elastic',
-			current: '',
-			fixed: true
 		});
 	</script>
 
