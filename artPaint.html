@@ -41,23 +41,194 @@
 	<script type="text/javascript">
 		$(function(){
 			$("#headerTpl").load("header.html", function(e){
-				var navHtml = template('tpl-head', {currentPage : "company"});
+				var navHtml = template('tpl-head', {currentPage : "product"});
 				$(".nav-links").html(navHtml);
 			});
 		});
 	</script>
 	<!-- /navigation -->
-
 	<!-- //header -->
 
 	<!-- about -->
-	<div class="company apply-site-page">
+	<div class="artPaint apply-site-page">
 		<div class="container">
 			<div class="title">
-				<h3>WORK</h3>
-				<div class="sub-title">办公</div>
+				<h3>艺术涂料</h3>
+				<div class="sub-title"></div>
+			</div>
+			<div class="row">
+				<div id="section-header-box" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="section-header">
+						<div class="first-letter">活</div><span>活．面</span>
+					</div>
+				</div>
+			</div>
+			<div id="discover-wrapper">
+				<div class="row">
+					<ul class="discover-list">
+						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
+							<a href="http://www.creativo-ltd.com/products/colour-wash/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_colour-wash.jpg');">
+								<div class="cover">
+									<h3 class="title">彩艺</h3>
+									<div class="desc">色彩。丰富</div>
+								</div>
+							</a>
+						</li>
+						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
+							<a href="http://www.creativo-ltd.com/products_category/decorative-plaster/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_decorative-plaster.jpg');">
+								<div class="cover">
+									<h3 class="title">饰艺</h3>
+									<div class="desc">完美。专业</div>
+								</div>
+							</a>
+						</li>
+						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
+							<a href="http://www.creativo-ltd.com/products/leafing-art/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_leafing-art.jpg');">
+								<div class="cover">
+									<h3 class="title">箔艺</h3>
+									<div class="desc">技术。古老</div>
+								</div>
+							</a>
+						</li>
+						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
+							<a href="http://www.creativo-ltd.com/products_category/surface-coating/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_surface-coating.jpg');">
+								<div class="cover">
+									<h3 class="title">涂艺</h3>
+									<div class="desc">转变。惊喜</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div id="section-header-box" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="section-header">
+						<div class="first-letter">活</div><span>活．艺</span>
+					</div>
+				</div>
+			</div>
+			<div id="discover-wrapper">
+				<div class="row">
+					<ul class="discover-list">
+						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
+							<a href="http://www.creativo-ltd.com/products/grg/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_grg.jpg');">
+								<div class="cover">
+									<h3 class="title">玻璃纤维增强石膏(GRG)</h3>
+									<div class="desc">玻璃纤维增强石膏</div>
+								</div>
+							</a>
+						</li>
+						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
+							<a href="http://www.creativo-ltd.com/products/grp/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_grp.jpg');">
+								<div class="cover">
+									<h3 class="title">玻璃纤维强化塑料(GRP)</h3>
+									<div class="desc">玻璃纤维强化塑料</div>
+								</div>
+							</a>
+						</li>
+						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
+							<a href="http://www.creativo-ltd.com/products/metal/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_metal.jpg');">
+								<div class="cover">
+									<h3 class="title">金属</h3>
+									<div class="desc">铝、铁、不锈钢</div>
+								</div>
+							</a>
+						</li>
+						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
+							<a href="http://www.creativo-ltd.com/products/resin/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_resin.jpg');">
+								<div class="cover">
+									<h3 class="title">树脂</h3>
+									<div class="desc">透明或彩色</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
+		<style>
+			.section-header {
+				background-color: #363636;
+				padding: 0;
+				margin-top: 15px;
+				line-height: 45px;
+				font-size: 20px;
+				text-transform: uppercase;
+				color: #fff;
+			}
+			.section-header .first-letter {
+				float: left;
+				font-size: 30px;
+				color: #363636;
+				width: 45px;
+				height: 45px;
+				text-align: center;
+				line-height: 45px;
+				border: 2px solid #363636;
+				background-color: #f5f5f5;
+				margin-right: 10px;
+			}
+			#discover-wrapper {
+				margin-top: 15px;
+			}
+			#discover-wrapper .discover-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			#discover-wrapper .discover-list > li {
+				height: 212px;
+				margin-bottom: 15px;
+			}
+			#discover-wrapper .discover-list > li .discover-box {
+				background-position: center;
+				background-size: cover;
+				position: relative;
+				color: #fff;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: #ddd;
+			}
+			#discover-wrapper .discover-list > li .discover-box:hover .cover {
+				background: transparent;
+			}
+			#discover-wrapper .discover-list > li .discover-box .cover {
+				background-color: rgba(0, 0, 0, 0.4);
+				display: block;
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			#discover-wrapper .discover-list > li .discover-box .cover .title {
+				color: #fff;
+				text-transform: uppercase;
+				font-size: 18px;
+				position: absolute;
+				bottom: 45px;
+				left: 0;
+				width: 100%;
+				padding: 15px;
+				line-height: 20px;
+				margin: 0;
+				text-align: left;;
+			}
+			#discover-wrapper .discover-list > li .discover-box .cover .desc {
+				color: #fff;
+				text-transform: uppercase;
+				font-size: 10px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				padding: 15px;
+				line-height: 20px;
+				margin: 0;
+			}
+		</style>
 	</div>
 	<!-- //about -->
 
@@ -68,70 +239,16 @@
 		</div>
 	</div>
 
+	<div class="footer"></div>
+	<div id="footerTpl"></div>
 	<script type="text/javascript">
-		var html = '';
-		for (var i = 0; i < 10; i++) {
-			html += '<a class="gallery-image" href="./images/company/comp' + i + '.jpg">' +
-				'<img src="./images/company/comp' + i + '.jpg" />' +
-				'</a>';
-		}
-		$("#site-gallery-wrapper").html(html)
+		$(function(){
+			$("#footerTpl").load("footer.html", function(e){
+				var navHtml = template('tpl-foot');
+				$(".footer").html(navHtml);
+			});
+		});
 	</script>
-
-	<!-- contact -->
-	<div class="contact footer-wrapper">
-		<div class="container">
-			<div class="col-md-7">
-				<div class="col-md-3 footer-pro-list">
-					<div class="contact-list">
-						<div class="list-title">产品展示</div>
-						<ul>
-							<li>
-								<a href="ideapaint.html">IdeaPaint</a>
-							</li>
-							<li>
-								<a href="ideaPlay.html">IdeaPlay</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-3 footer-cont-list">
-					<div class="contact-list">
-						<div class="list-title">联系我们</div>
-						<ul>
-							<li>
-								<a href="contact.html">联系我们</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-5">
-				<div class="contact-list">
-					<div class="list-title">深圳市艾迪亚装饰材料有限公司</div>
-					<ul>
-						<li>电话/传真：+86 0755-86566796</li>
-						<li>邮箱：
-							<a href="mailto:infocn@creativo-ltd.com">infocn@creativo-ltd.com</a>
-						</li>
-						<li>网站：
-							<a href="http://www.creativo-ltd.com.cn" target="_blank">www.creativo-ltd.com.cn</a>
-						</li>
-						<li>地址：深圳市南山区科发路19号华润置地大厦D座5楼</li>
-					</ul>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-	<!-- contact -->
-	<div class="copyright">
-		<div class="container">
-			<p>Copyright© 2018 深圳市艾迪亚装饰材料有限公司 版权所有
-				<a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备18085838号-1</a>
-			</p>
-		</div>
-	</div>
 
 	<!-- start-smoth-scrolling -->
 	<script type="text/javascript" src="js/move-top.js"></script>
