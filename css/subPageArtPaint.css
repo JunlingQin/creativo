@@ -1,0 +1,90 @@
+#page-header .page-header-box {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #7ea7b5;
+    padding: 25px 15px;
+}
+#page-header .page-header-box > .sub-title {
+    font-size: 12px;
+    line-height: 20px;
+    color: #bbbebf;
+}
+#single-product-content-wrap .product-profile-box {
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+#single-product-wrapper .back-control-box {
+    background-color: #7ea7b5;
+}
+#single-product-wrapper .back-control-box a {
+    color: #fff;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    line-height: 30px;
+    text-decoration: none;
+}
+p {
+    margin: 0 0 10px;
+}
+.product-description ul {
+    padding-left: 30px;
+}
+#tax-terms-list-wrapper {
+    margin-top: 20px;
+}
+#tax-terms-list-wrapper .tax-terms-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#tax-terms-list-wrapper .term-box {
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px;
+    background-color: #ddd;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#tax-terms-list-wrapper .term-box .black-mask:hover {
+    opacity: 0.2;
+    color: #000;
+}
+#tax-terms-list-wrapper .term-box .black-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background: #112f39;
+    background: -webkit-linear-gradient(top, #112f39 , #edeeee);
+    background: -o-linear-gradient(top, #112f39, #edeeee);
+    background: -moz-linear-gradient(top, #112f39, #edeeee);
+    background: linear-gradient(to top, #112f39 , #edeeee);
+}
+#tax-terms-list-wrapper .term-box .black-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/product-black-mask.png) bottom repeat-x;
+}
+#tax-terms-list-wrapper .term-box .term-name-desc-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 15px;
+}
+#tax-terms-list-wrapper .term-box .term-name-desc-box .term-name {
+    font-weight: normal;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}

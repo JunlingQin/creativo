@@ -56,97 +56,105 @@
 				<h3>艺术涂料</h3>
 				<div class="sub-title"></div>
 			</div>
-			<div class="row">
-				<div id="section-header-box" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="section-header">
-						<div class="first-letter">活</div><span>活．面</span>
-					</div>
-				</div>
-			</div>
-			<div id="discover-wrapper">
-				<div class="row">
-					<ul class="discover-list">
-						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<a href="http://www.creativo-ltd.com/products/colour-wash/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_colour-wash.jpg');">
-								<div class="cover">
-									<h3 class="title">彩艺</h3>
-									<div class="desc">色彩。丰富</div>
-								</div>
-							</a>
-						</li>
-						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<a href="http://www.creativo-ltd.com/products_category/decorative-plaster/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_decorative-plaster.jpg');">
-								<div class="cover">
-									<h3 class="title">饰艺</h3>
-									<div class="desc">完美。专业</div>
-								</div>
-							</a>
-						</li>
-						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<a href="http://www.creativo-ltd.com/products/leafing-art/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_leafing-art.jpg');">
-								<div class="cover">
-									<h3 class="title">箔艺</h3>
-									<div class="desc">技术。古老</div>
-								</div>
-							</a>
-						</li>
-						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<a href="http://www.creativo-ltd.com/products_category/surface-coating/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_surface-coating.jpg');">
-								<div class="cover">
-									<h3 class="title">涂艺</h3>
-									<div class="desc">转变。惊喜</div>
-								</div>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div id="section-header-box" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="section-header">
-						<div class="first-letter">活</div><span>活．艺</span>
-					</div>
-				</div>
-			</div>
-			<div id="discover-wrapper">
-				<div class="row">
-					<ul class="discover-list">
-						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<a href="http://www.creativo-ltd.com/products/grg/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_grg.jpg');">
-								<div class="cover">
-									<h3 class="title">玻璃纤维增强石膏(GRG)</h3>
-									<div class="desc">玻璃纤维增强石膏</div>
-								</div>
-							</a>
-						</li>
-						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<a href="http://www.creativo-ltd.com/products/grp/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_grp.jpg');">
-								<div class="cover">
-									<h3 class="title">玻璃纤维强化塑料(GRP)</h3>
-									<div class="desc">玻璃纤维强化塑料</div>
-								</div>
-							</a>
-						</li>
-						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<a href="http://www.creativo-ltd.com/products/metal/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_metal.jpg');">
-								<div class="cover">
-									<h3 class="title">金属</h3>
-									<div class="desc">铝、铁、不锈钢</div>
-								</div>
-							</a>
-						</li>
-						<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
-							<a href="http://www.creativo-ltd.com/products/resin/?lang=zh-hans" class="bathroom discover-box" style="background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_resin.jpg');">
-								<div class="cover">
-									<h3 class="title">树脂</h3>
-									<div class="desc">透明或彩色</div>
-								</div>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+			<div class="art-paint-category-wrap"></div>
 		</div>
+		<script type="text/javascript">
+			var artPaintJson = [
+				{
+					firstLetter: "活",
+					category_title: "活．面",
+					products: [
+						{
+							link: "./subPagesArtPaint/caiyi.html",
+							img: "http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_colour-wash.jpg",
+							title: "彩艺",
+							desc: "色彩。丰富"
+						},
+						{
+							link: "./subPagesArtPaint/shiyi.html",
+							img: "http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_leafing-art.jpg",
+							title: "饰艺",
+							desc: "完美。专业"
+						},
+						{
+							link: "./subPagesArtPaint/boyi.html",
+							img: "http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_colour-wash.jpg",
+							title: "箔艺",
+							desc: "技术。古老"
+						},
+						{
+							link: "./subPagesArtPaint/tuyi.html",
+							img: "http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_finish_surface-coating.jpg",
+							title: "涂艺",
+							desc: "转变。惊喜"
+						}
+					]
+				}, 
+				{
+					firstLetter: "活",
+					category_title: "活．艺",
+					products: [
+						{
+							link: "./subPagesArtPaint/bolishigao.html",
+							img: "http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_grg.jpg",
+							title: "玻璃纤维增强石膏(GRG)",
+							desc: "玻璃纤维增强石膏"
+						},
+						{
+							link: "./subPagesArtPaint/bolisuliao.html",
+							img: "http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_grp.jpg",
+							title: "玻璃纤维强化塑料(GRP)",
+							desc: "玻璃纤维强化塑料"
+						},
+						{
+							link: "./subPagesArtPaint/jinshu.html",
+							img: "http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_metal.jpg",
+							title: "金属",
+							desc: "铝、铁、不锈钢"
+						},
+						{
+							link: "./subPagesArtPaint/shuzhi.html",
+							img: "http://www.creativo-ltd.com/wp-content/uploads/2016/07/Index_artwork_resin.jpg",
+							title: "树脂",
+							desc: "透明或彩色"
+						}
+					]
+				}
+			]
+		</script>
+		<script id="tpl-categories" type="text/html">
+			{{each categories cateItem}}
+				<div class="row">
+					<div id="section-header-box" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="section-header">
+							<div class="first-letter">{{cateItem.firstLetter}}</div><span>{{cateItem.category_title}}</span>
+						</div>
+					</div>
+				</div>
+				<div id="discover-wrapper">
+					<div class="row">
+						<ul class="discover-list">
+							{{each cateItem.products proInfo}}
+							<li class="discover-item col-xs-12 col-sm-3 col-md-3 col-lg-3">
+								<a href={{proInfo.link}} class="bathroom discover-box" style="background-image: url({{proInfo.img}});">
+									<div class="cover">
+										<h3 class="title">{{proInfo.title}}</h3>
+										<div class="desc">{{proInfo.desc}}</div>
+									</div>
+								</a>
+							</li>
+							{{/each}}
+						</ul>
+					</div>
+				</div>
+			{{/each}}
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				var categoryHtml = template('tpl-categories', {categories : artPaintJson});
+				$(".art-paint-category-wrap").html(categoryHtml);
+			})
+		</script>
 		<style>
 			.section-header {
 				background-color: #363636;

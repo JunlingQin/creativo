@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="shortcut icon" href="../images/favicon.ico" />
+	<meta name="keywords" content="深圳市艾迪亚装饰材料有限公司,书写墙,涂鸦墙">
+	<title>刮色-Creativo</title>
+	<meta name="description"
+		content="深圳市艾迪亚装饰材料有限公司是一家专注提供特殊艺术涂料的公司，作为IdeaPaint中国独家总代理，提供专业的装饰工程施工咨询、艺术品定制，艺术材料推荐，以及完善的售后服务。帮助用户更方便的使用产品。">
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //for-mobile-apps -->
+	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/subPageArtPaint.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- js -->
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+	<script src="../js/template-web.js"></script>
+	<!-- //js -->
+	<!-- font-awesome icons -->
+	<link href="../css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<!-- <link href="//fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet"> -->
+	<!-- <link href="//fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet"> -->
+</head>
+
+<body class="body-wrapper">
+	<div id="headerTpl"></div>
+	<!-- header -->
+	<!-- banner -->
+	<!-- navigation -->
+	<div class="nav-links"></div>
+	<script type="text/javascript">
+		$(function () {
+			$("#headerTpl").load("../header.html", function (e) {
+				var navHtml = template('tpl-head', { currentPage: "product" });
+				$(".nav-links").html(navHtml);
+			});
+		});
+	</script>
+	<!-- /navigation -->
+	<!-- //header -->
+
+	<section id="tax-news">
+		<div id="page-header">
+			<div class="container">
+				<div class="row">
+					<h1 class="page-header-box col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						活．面<br>
+						<div class="sub-title">从来我们只提供优质产品</div>
+					</h1>
+				</div>
+			</div>
+		</div>
+		<div id="tax-terms-list-wrapper" class="container">
+			<div class="row">
+				<ul class="tax-terms-list">
+
+					<li class="term-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<a href="./shiyi-venetian.html">
+							<div class="term-box"
+								style="background-size:cover; background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/09/decorative-plaster_index_venetian.jpg')">
+								<div class="black-mask"></div>
+								<div class="term-name-desc-box">
+									<h2 class="term-name">威尼斯批荡</h2>
+								</div>
+							</div>
+						</a>
+					</li>
+
+
+					<li class="term-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<a href="./shiyi-fauxPlaster.html">
+							<div class="term-box"
+								style="background-size:cover; background-image: url('http://www.creativo-ltd.com/wp-content/uploads/2016/09/decorative-plaster_index_Faux.jpg')">
+								<div class="black-mask"></div>
+								<div class="term-name-desc-box">
+									<h2 class="term-name">饰面批荡</h2>
+								</div>
+							</div>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<div class="footer"></div>
+	<div id="footerTpl"></div>
+	<script type="text/javascript">
+		$(function () {
+			$("#footerTpl").load("../footer.html", function (e) {
+				var navHtml = template('tpl-foot');
+				$(".footer").html(navHtml);
+			});
+		});
+	</script>
+
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="../js/move-top.js"></script>
+	<script type="text/javascript" src="../js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+
+	<!-- for bootstrap working -->
+	<script src="../js/bootstrap.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+</body>
+
+</html>
