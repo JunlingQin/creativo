@@ -54,42 +54,28 @@
 	<!-- //header -->
 	<!-- banner -->
 	<div id="banner-swiper-container" class="container banner swiper-container">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide item">
-				<div class="fill" style="background-image:url('images/IndexSwiper/1.jpg');"></div>
-			</div>
-			<div class="swiper-slide item">
-				<div class="fill" style="background-image:url('images/IndexSwiper/2.jpg');"></div>
-			</div>
-			<div class="swiper-slide item">
-				<div class="fill" style="background-image:url('images/IndexSwiper/3.png');"></div>
-			</div>
-			<div class="swiper-slide item">
-				<div class="fill" style="background-image:url('images/IndexSwiper/4.jpg');"></div>
-			</div>
-			<div class="swiper-slide item">
-				<div class="fill" style="background-image:url('images/IndexSwiper/5.png');"></div>
-			</div>
-			<div class="swiper-slide item">
-				<div class="fill" style="background-image:url('images/IndexSwiper/6.png');"></div>
-			</div>
-			<div class="swiper-slide item">
-				<div class="fill" style="background-image:url('images/IndexSwiper/7.jpg');"></div>
-			</div>
-			<div class="swiper-slide item">
-				<div class="fill" style="background-image:url('images/IndexSwiper/8.jpg');"></div>
-			</div>
-			<div class="swiper-slide item">
-				<div class="fill" style="background-image:url('images/IndexSwiper/9.jpg');"></div>
-			</div>
-			<div class="swiper-slide item">
-				<div class="fill" style="background-image:url('images/IndexSwiper/10.jpg');"></div>
-			</div>
-		</div>
+		<div class="swiper-wrapper"></div>
 		<div class="swiper-button-next swiper-button-white"></div>
 		<div class="swiper-button-prev swiper-button-white"></div>
 	</div>
 	<!-- //banner -->
+	<script id="tpl-banner-item" type="text/html">
+		{{each imageList imageId}}
+			<div class="swiper-slide item">
+				<div class="fill" style="background-image:url('images/IndexSwiper/{{imageId}}.jpg');"></div>
+			</div>
+		{{/each}}
+	</script>
+	<script type="text/javascript">
+		var showNumber = 11;
+		var pictureNumberList = [];
+		for(var i = 1; i <= showNumber; i++){
+			pictureNumberList.push(i);
+		}
+		$(".swiper-wrapper").html(template("tpl-banner-item", {
+			imageList: pictureNumberList
+		}));
+	</script>
 
 	<!-- product -->
 	<div class="container product" id="product">
@@ -100,42 +86,86 @@
 			<div class="product_grids">
 				<div class="col-xs-6 col-md-4 product_grid">
 					<a href="ideapaint.html">
-						<div class="hovereffect">
-							<img class="pro-img" src="images/IdeaPaintLogo.png" alt=" " />
-						</div>
+						<div class="hovereffect" style="background-image:url(images/IdeaPaintLogo.png)"></div>
 						<p>&nbsp;</p>
-						<h4>IdeaPaint</h4>
+						<h4>白板漆</h4>
 					</a>
 				</div>
 				<div class="col-xs-6 col-md-4 product_grid">
 					<a href="artPaint.html">
-						<div class="hovereffect">
-							<img class="pro-img" src="images/artPaint.png" alt=" " />
-						</div>
+						<div class="hovereffect" style="background-image:url(images/artPaint.png)"></div>
 						<p>&nbsp;</p>
 						<h4>艺术涂料</h4>
 					</a>
 				</div>
 				<div class="col-xs-6 col-md-4 product_grid">
 					<a href="ideaPlay.html">
-						<div class="hovereffect">
-							<img class="pro-img" src="images/ideaplayIntro.png" alt=" " />
-						</div>
+						<div class="hovereffect" style="background-image:url(images/ideaplayIntro.png)"></div>
 						<p>&nbsp;</p>
-						<h4>IdeaPlay</h4>
+						<h4>白板配套产品</h4>
 					</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
+	<style>
+		.product_grid {
+			text-align: center;
+		}
+
+		.product_grid .hovereffect:hover {
+			transition: all 0.3s;
+			transform: scale(1.05);
+		}
+
+		.product_grid h4 {
+			height: 25px;
+			font-size: 20px;
+			font-weight: bold;
+			color: #282828;
+			margin: 0.5em 0;
+			text-transform: capitalize;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.product_grid p {
+			color: #212121;
+			font-size: 13px;
+			letter-spacing: 0.5px;
+			margin-top: 2px;
+		}
+
+		.product_grid a {
+			display: inline-block;
+			width: 100%;
+			font-size: 14px;
+			padding: 20px;
+			border-radius: 3px;
+			transition: all 0.5s ease;
+		}
+
+		.product_grid a:hover {
+			color: #00b1cb;
+			background: #fff;
+		}
+		.hovereffect {
+			height: 0;
+			padding-bottom: 70%;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	</style>
 	<!-- //product -->
 
 	<!-- 公司 -->
 	<div class="container apply-site company">
 		<div class="container">
 			<div class="intro-wrapper wow rotateInDownLeft" data-wow-offset="20" data-wow-duration="2s">
-				<h3 class="title">IdeaPaint</h3>
+				<h3 class="title">白板漆/IdeaPaint</h3>
 				<p class="intro-text">Transform any flat surface into collaborative work tools.</p>
 				<p class="intro-text">将任何平面变成协同工作的工具</p>
 				<a class="more" href="ideapaint.html">了解更多</a>
@@ -148,7 +178,7 @@
 	<div class="container apply-site school">
 		<div class="container">
 			<div class="intro-wrapper wow zoomInDown" data-wow-offset="20" data-wow-duration="2s">
-				<h3 class="title">艺术涂料</h3>
+				<h3 class="title">艺术涂料/Stucco Italiano</h3>
 				<p class="intro-text">Creativo Art, Quality Life</p>
 				<p class="intro-text">活的艺术，活出艺术</p>
 				<a class="more" href="artPaint.html">了解更多</a>
@@ -161,7 +191,7 @@
 	<div class="container apply-site home">
 		<div class="container">
 			<div class="intro-wrapper wow fadeInDown" data-wow-offset="20" data-wow-duration="2s">
-				<h3 class="title">IdeaPlay</h3>
+				<h3 class="title">白板配套产品/IdeaPlay</h3>
 				<p class="intro-text">Inspire more fun and potential</p>
 				<p class="intro-text">激发更多的潜能和乐趣</p>
 				<a class="more" href="ideaPlay.html">了解更多</a>
@@ -173,13 +203,30 @@
 
 	<div class="container home-page-video-wrapper">
 		<div class="row video-wrapper">
-			<video id="player" style="height: 100%; width: 100%" preload="none" poster="images/videoposter.png" src="images/indexpage.mp4"
-			    controls="controls">
-				您的浏览器不支持 video 标签。
-			</video>
+			<div class="video-wrapper-left">
+				<video id="player-left" style="height: 100%; width: 100%" preload="none" poster="images/videoposter.png" src="images/indexpage.mp4"
+					controls="controls">
+					您的浏览器不支持 video 标签。
+				</video>
+			</div>
+			<div class="video-wrapper-right">
+				<video id="player-right" style="height: 100%; width: 100%" preload="none" poster="images/artPaint.png" src="images/indexpageRight.mp4"
+					controls="controls">
+					您的浏览器不支持 video 标签。
+				</video>
+			</div>
 		</div>
-
 	</div>
+	<style>
+		.video-wrapper-left {
+			float: left;
+			width: 49%;
+		}
+		.video-wrapper-right {
+			float: right;;
+			width: 49%;
+		}
+	</style>
 
 	<!-- footer -->
 	<div class="footer"></div>
@@ -251,7 +298,15 @@
 			mejs.i18n.language("zh-CN");
 			// You can use either a string for the player ID (i.e., `player`), 
 			// or `document.querySelector()` for any selector
-			var player = new MediaElementPlayer('player', {
+			var playerLeft = new MediaElementPlayer('player-left', {
+				// When using `MediaElementPlayer`, an `instance` argument
+				// is available in the `success` callback
+				pluginPath: './js/shims/',
+				success: function (mediaElement, originalNode, instance) {
+					// do things
+				}
+			});
+			var playerRight = new MediaElementPlayer('player-right', {
 				// When using `MediaElementPlayer`, an `instance` argument
 				// is available in the `success` callback
 				pluginPath: './js/shims/',
