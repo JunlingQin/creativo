@@ -70,7 +70,6 @@
 			categories: "零售店",
 			list: new Array(4)
 		},
-
 		6: {
 			imgId: 6,
 			title: "凡赛斯",
@@ -87,6 +86,114 @@
 			imgId: 8,
 			title: "伯爵专卖店",
 			categories: "精品店",
+			list: new Array(4)
+		},
+		9: {
+			imgId: 9,
+			title: "宝格丽",
+			categories: "百货公司",
+			list: new Array(9)
+		},
+		10: {
+			imgId: 10,
+			title: "香港 K11 ,FURLA",
+			categories: "百货公司",
+			list: new Array(3)
+		},
+		11: {
+			imgId: 11,
+			title: "香港置地广场FENDI",
+			categories: "百货公司",
+			list: new Array(4)
+		},
+		12: {
+			imgId: 12,
+			title: "上海中信泰富广场FURLA",
+			categories: "百货公司",
+			list: new Array(4)
+		},
+		13: {
+			imgId: 13,
+			title: "香港大屿山散石湾 37号",
+			categories: "住宅项目",
+			list: new Array(5)
+		},
+		14: {
+			imgId: 14,
+			title: "香港海港城Cerruti 1881",
+			categories: "威尼斯批荡",
+			list: new Array(4)
+		},
+		15: {
+			imgId: 15,
+			title: "香港君临天下",
+			categories: "住宅项目",
+			list: new Array(4)
+		},
+		16: {
+			imgId: 16,
+			title: "香港柏宁酒店",
+			categories: "威尼斯批荡",
+			list: new Array(5)
+		},
+		17: {
+			imgId: 17,
+			title: "香港汇汉大厦",
+			categories: "商业中心",
+			list: new Array(5)
+		},
+		18: {
+			imgId: 18,
+			title: "香港的法国巴黎银行",
+			categories: "办公室",
+			list: new Array(3)
+		},
+		19: {
+			imgId: 19,
+			title: "新加坡樟宜机场免税店",
+			categories: "零售店",
+			list: new Array(2)
+		},
+		20: {
+			imgId: 20,
+			title: "广州K11",
+			categories: "百货公司",
+			list: new Array(5)
+		},
+		21: {
+			imgId: 21,
+			title: "从化温泉别墅",
+			categories: "住宅项目",
+			list: new Array(6)
+		},
+		22: {
+			imgId: 22,
+			title: "佛山保利洲际酒店",
+			categories: "酒店项目",
+			list: new Array(2)
+		},
+		23: {
+			imgId: 23,
+			title: "香港迷你酒店",
+			categories: "酒店项目",
+			list: new Array(3)
+		},
+		24: {
+			imgId: 24,
+			title: "澳门马莎百货威尼斯人店",
+			categories: "百货公司",
+			list: new Array(4)
+		},
+		25: {
+			imgId: 25,
+			title: "香港牛三馆",
+			categories: "餐厅项目",
+			list: new Array(5)
+		},
+		26: {
+			imgId: 26,
+			title: "香港圣雅各小学",
+			categories: "学校项目",
 			list: new Array(4)
 		}
 	};
@@ -174,7 +281,7 @@
 	</style>
 
 	<div class="jobs-refer-detail" style="display: none;">
-		<div class="container">
+		<div class="container margin-t-20">
 			<div class="back-control-box col-xs-6 col-sm-4 col-md-2 col-lg-2 col-lg-offset-10">
 				<span>返回</span>
 			</div>
@@ -216,13 +323,13 @@
 	</script>
 	<script src="js/swiper.min.js"></script>
 	<script type="text/javascript">
-		var pictureNumberList = new Array(9);
 		$(function(){
 			$("#site-gallery-wrapper").on("click", ".jobs-reference-item", function(){
 				var imgId = $(this).attr("data-imageId");
 				if (imagesJson[imgId]) {
 					$(".apply-site-page").hide();
 					$(".jobs-reference-list").hide();
+					$(".pagination-nav").hide();
 					$(".jobs-refer-detail").show();
 					$(".jobs-refer-detail .gallery-detail-container").html(template("tpl-jobs-reference-detail", imagesJson[imgId]));
 					var galleryThumbs = new Swiper('.gallery-thumbs', {
@@ -251,6 +358,7 @@
 			$(".back-control-box").on("click", function(){
 				$(".apply-site-page").show();
 				$(".jobs-reference-list").show();
+				$(".pagination-nav").show();
 				$(".jobs-refer-detail").hide();
 			});
 		})
@@ -312,6 +420,53 @@
 		}
 		.gallery-thumbs .swiper-slide-thumb-active {
 			opacity: 1;
+		}
+	</style>
+	<div class="container">
+		<nav class="pagination-nav" aria-label="Page navigation">
+			<ul class="pagination">
+				<li data-page=1 class="prePage" style="display: none;">
+					<a href="javacript:void(0);" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+				<li data-page=1 class="page1 active"><a href="javacript:void(0);">1</a></li>
+				<li data-page=2 class="page2"><a href="javacript:void(0);">2</a></li>
+				<li data-page=3 class="page3"><a href="javacript:void(0);">3</a></li>
+				<li data-page=3 class="nextPage">
+					<a href="javacript:void(0);" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			var pageLength = 3;
+			var firstPageNum = 1;
+			var showNumber = 9;
+			$(".pagination").on("click", "li", function(){
+				var pageId = $(this).attr("data-page");
+				$(".pagination li").removeClass('active');
+				$('.page' + pageId).addClass('active');
+				parseInt(pageId) === firstPageNum ? $('.prePage').hide() : $('.prePage').show();
+				parseInt(pageId) === pageLength ? $('.nextPage').hide() : $('.nextPage').show();
+				var startNum = (parseInt(pageId) - 1) * showNumber;
+				var endNum = startNum + showNumber;
+				var pictureNumberList = [];
+				for(var i = startNum; i < endNum; i++){
+					pictureNumberList.push(imagesJson[i]);
+				}
+				$("#site-gallery-wrapper").html(template("tpl-jobs-reference-item", {
+					imageList: pictureNumberList
+				}));
+			});
+		})
+	</script>
+	<style>
+		.pagination-nav {
+			text-align: center;
 		}
 	</style>
 
